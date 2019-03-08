@@ -3,6 +3,11 @@ import Product from "../assets/img/products/product-grey-7.jpg";
 
 class AddProduct extends Component {
   state = {};
+
+  // pageChangedHandler = page => {
+  //   this.setState({ currentPage: page });
+  // };
+
   render() {
     return (
       <div className="add-product container">

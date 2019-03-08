@@ -6,8 +6,19 @@ import Pagination from "../Components/pagination";
 import { connect } from "react-redux";
 
 class ProductList extends Component {
+  Paginate(items, pageNumber, pageSize) {
+    let startindex = (pageNumber - 1) * pageSize;
+    return items.slice(startindex, startindex + pageSize);
+  }
+
+  allProducts = this.Paginate(
+    this.props.pr,
+    this.props.currentPage,
+    this.props.pageSize
+  );
+
   render() {
-    const products = this.props.pr.map((product, index) => (
+    const products = this.allProducts.map((product, index) => (
       <Product
         key={index}
         id={product.id}
@@ -17,13 +28,19 @@ class ProductList extends Component {
         ProductImg={product.ProductImg}
       />
     ));
+
     return (
-      <section class="item-listing">
+      <section className="item-listing">
         <Filter />
         <div className="item-listing__items item-listing--3items">
           {products}
         </div>
-        <Pagination />
+        <Pagination
+          pageChanged={this.pageChangedHandler}
+          itemsCount={this.props.pr.length}
+          pageSize={this.props.pageSize}
+          currentPage={this.props.currentPage}
+        />
       </section>
     );
   }
@@ -31,7 +48,9 @@ class ProductList extends Component {
 
 const mapStateToProps = state => {
   return {
-    pr: state.products
+    pr: state.products,
+    pageSize: state.pageSize,
+    currentPage: state.currentPage
   };
 };
 export default connect(

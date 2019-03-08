@@ -7,7 +7,7 @@ import Product1Img from "../assets/img/products/product-1.jpg";
 const intiateState = {
   products: [
     {
-      id:1,
+      id: 1,
       name: "photo camera",
       ProductImg: ProductImg,
       PersonalImg: PersonalImg,
@@ -17,7 +17,7 @@ const intiateState = {
       priceAfter: 100
     },
     {
-      id:2,
+      id: 2,
       name: "photo camera",
       ProductImg: ProductImg,
       PersonalImg: PersonalImg,
@@ -27,7 +27,7 @@ const intiateState = {
       priceAfter: 100
     },
     {
-      id:3,
+      id: 3,
       name: "photo camera",
       ProductImg: ProductImg,
       PersonalImg: PersonalImg,
@@ -37,7 +37,7 @@ const intiateState = {
       priceAfter: 100
     },
     {
-      id:4,
+      id: 4,
       name: "photo camera",
       ProductImg: ProductImg,
       PersonalImg: PersonalImg,
@@ -47,7 +47,7 @@ const intiateState = {
       priceAfter: 100
     },
     {
-      id:5,
+      id: 5,
       name: "photo camera",
       ProductImg: ProductImg,
       PersonalImg: PersonalImg,
@@ -57,7 +57,7 @@ const intiateState = {
       priceAfter: 100
     },
     {
-      id:6,
+      id: 6,
       name: "photo camera",
       ProductImg: ProductImg,
       PersonalImg: PersonalImg,
@@ -67,7 +67,7 @@ const intiateState = {
       priceAfter: 100
     },
     {
-      id:7,
+      id: 7,
       name: "photo camera",
       ProductImg: ProductImg,
       PersonalImg: PersonalImg,
@@ -77,7 +77,7 @@ const intiateState = {
       priceAfter: 100
     },
     {
-      id:8,
+      id: 8,
       name: "photo camera",
       ProductImg: ProductImg,
       PersonalImg: PersonalImg,
@@ -87,7 +87,7 @@ const intiateState = {
       priceAfter: 100
     },
     {
-      id:9,
+      id: 9,
       name: "photo camera",
       ProductImg: ProductImg,
       PersonalImg: PersonalImg,
@@ -96,7 +96,9 @@ const intiateState = {
       priceBefore: 135,
       priceAfter: 100
     }
-  ]
+  ],
+  pageSize: 6,
+  currentPage: 1
 };
 
 const reducer = (state = intiateState) => {
